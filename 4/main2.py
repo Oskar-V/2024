@@ -14,15 +14,7 @@ def check_matrix(m,k):
 				return False
 	return True
 
-def print_matrix(m):
-	for i in m:
-		for j in i:
-			print(j, end="")
-		print()
-	print()
-	
-
-with open('./input') as f:
+with open(file_name) as f:
 	key_matrix = [
 		["M"," ","S"],
 		[" ","A"," "],
@@ -46,6 +38,5 @@ with open('./input') as f:
 				if check_matrix(t, key_matrix):
 					keyword_counter += 1
 					break
-				
 				
 	print(keyword_counter)
